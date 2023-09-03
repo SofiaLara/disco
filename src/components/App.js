@@ -6,7 +6,8 @@ import '../styles/App.css'
 
 function App() {
   return (
-    <BrowserRouter>
+    // GH pages dones't support historyAPI so we add a basename
+    <BrowserRouter basename='/disco'>
       <Routes>
         <Route path="/" element={<ArtworkList />} />
         <Route path="/artwork/:id" element={<ArtworkDetail />} />
